@@ -17,6 +17,9 @@
 
 
     <string name="T4_End">What? Such a cop out! Did you know traffic accidents are the second leading cause of accidental death for most adult age groups?</string>
+    <string name="T456_Ans1">Restart game</string>
+    <string name="T456_Ans2">Quit game</string>
+
     <string name="T5_End">As you smash through the guardrail and careen towards the jagged rocks below you reflect on the dubious wisdom of stabbing someone while they are driving a car you are in.</string>
     <string name="T6_End">You bond with the murderer while crooning verses of "Can you feel the love tonight". He drops you off at the next town. Before you go he asks you if you know any good places to dump bodies. You reply: \"Try the pier.\"</string>
 

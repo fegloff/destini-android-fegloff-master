@@ -52,6 +52,17 @@
         android:textColor="#ecf0f1"
         android:textSize="15sp"/>
 
+    <TextView
+        android:id="@+id/theEndTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="190dp"
+        android:text="@string/the_end"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

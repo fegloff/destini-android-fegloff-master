@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO: Steps 4 & 8 - Declare member variables here:
     private TextView mStoryTextView;
+    private TextView mTheEndTextView;
     private Button mButtonTop;
     private Button mButtonBottom;
     private int mStory;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mStoryTextView = findViewById(R.id.storyTextView);
         mButtonBottom = findViewById(R.id.buttonBottom);
         mButtonTop = findViewById(R.id.buttonTop);
+        mTheEndTextView = findViewById(R.id.theEndTextView);
 
         if (savedInstanceState != null) {
             switch (savedInstanceState.getInt("StoryKey")) {
@@ -56,22 +58,26 @@ public class MainActivity extends AppCompatActivity {
                     mStoryTextView.setText(R.string.T4_End);
                     mButtonTop.setText(R.string.T456_Ans1);
                     mButtonBottom.setText(R.string.T456_Ans2);
+                    mTheEndTextView.setVisibility(View.VISIBLE);
                     break;
                 case FIFTH_STORY_END:
                     mStory = FIFTH_STORY_END;
                     mStoryTextView.setText(R.string.T5_End);
                     mButtonTop.setText(R.string.T456_Ans1);
                     mButtonBottom.setText(R.string.T456_Ans2);
+                    mTheEndTextView.setVisibility(View.VISIBLE);
                     break;
                 case SIXTH_STORY_END:
                     mStory = SIXTH_STORY_END;
                     mStoryTextView.setText(R.string.T6_End);
                     mButtonTop.setText(R.string.T456_Ans1);
                     mButtonBottom.setText(R.string.T456_Ans2);
+                    mTheEndTextView.setVisibility(View.VISIBLE);
                     break;
             }
         } else {
             mStory = FIRST_STORY;
+            mTheEndTextView.setVisibility(View.INVISIBLE);
         }
 
         // TODO: Steps 6, 7, & 9 - Set a listener on the top button:
@@ -96,24 +102,14 @@ public class MainActivity extends AppCompatActivity {
                         mStoryTextView.setText(R.string.T6_End);
                         mButtonTop.setText(R.string.T456_Ans1);
                         mButtonBottom.setText(R.string.T456_Ans2);
+                        mTheEndTextView.setVisibility(View.VISIBLE);
                         break;
-                    case FOURTH_STORY_END:
+                    default:
                         mStory = FIRST_STORY;
                         mStoryTextView.setText(R.string.T1_Story);
                         mButtonTop.setText(R.string.T1_Ans1);
                         mButtonBottom.setText(R.string.T1_Ans2);
-                        break;
-                    case FIFTH_STORY_END:
-                        mStory = FIRST_STORY;
-                        mStoryTextView.setText(R.string.T1_Story);
-                        mButtonTop.setText(R.string.T1_Ans1);
-                        mButtonBottom.setText(R.string.T1_Ans2);
-                        break;
-                    case SIXTH_STORY_END:
-                        mStory = FIRST_STORY;
-                        mStoryTextView.setText(R.string.T1_Story);
-                        mButtonTop.setText(R.string.T1_Ans1);
-                        mButtonBottom.setText(R.string.T1_Ans2);
+                        mTheEndTextView.setVisibility(View.INVISIBLE);
                         break;
                 }
             }
@@ -135,20 +131,16 @@ public class MainActivity extends AppCompatActivity {
                         mStoryTextView.setText(R.string.T4_End);
                         mButtonTop.setText(R.string.T456_Ans1);
                         mButtonBottom.setText(R.string.T456_Ans2);
+                        mTheEndTextView.setVisibility(View.VISIBLE);
                         break;
                     case THIRD_STORY:
                         mStory = FIFTH_STORY_END;
                         mStoryTextView.setText(R.string.T5_End);
                         mButtonTop.setText(R.string.T456_Ans1);
                         mButtonBottom.setText(R.string.T456_Ans2);
+                        mTheEndTextView.setVisibility(View.VISIBLE);
                         break;
-                    case FOURTH_STORY_END:
-                        finish();
-                        break;
-                    case FIFTH_STORY_END:
-                        finish();
-                        break;
-                    case SIXTH_STORY_END:
+                    default:
                         finish();
                         break;
                 }
